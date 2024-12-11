@@ -13,11 +13,6 @@ header {
   align-items: center;
 }
 
-header > img {
-  width: 400px;
-  height: 400px;
-}
-
 header > * {
   margin: 0;
 }
@@ -40,8 +35,5 @@ footer {
 }
 
 @media screen and (width <= 768px) {
-  header > img {
-    width: 250px;
-    height: 250px;
-  }
+
 }
