@@ -1,0 +1,26 @@
+html {
+  background-color: #ddff36;
+}
+
+.picture {
+  width: 300px;
+  height: 300px;
+}
+
+main {
+  display: inline-flex;
+}
+
+.text h1 {
+  margin-top: 0;
+}
+
+.text {
+  margin-left: 1em;
+}
+
+@media screen and (width <= 768px) {
+  main {
+    display: inline-block;
+  }
+}
