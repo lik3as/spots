@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,12 +17,32 @@
         (boa pra andar de skate)
       </p>
     </header>
-    <main
-      <p>
-        eu não vou repetir uma palavra!
+    <main>
+      <p id="about-picture">
+        a rua por si só já é bem bonita, mas quando o Sol bate
+        fica perfeito
       </p>
+      <button onclick="changePicture()">
+        próxima foto
+      </button>
     </main>
-    <footer> 
-    </footer>
   </body>
+  <script defer>
+    const imagesPaths = ["../assets/images/%blessed-sun-day", "../assets/images/%blessed-bench"];
+    const imageText = ["a rua por si só já é bem bonita, mas quando o Sol bate fica perfeito",
+    "deve ser legal dar um BS crooked (acho que é esse o nome) aí."]
+
+    let currentImageIndex = 0;
+
+    const aboutPictureElement = document.getElementById("about-picture");
+    const mainPicture = document.getElementsByClassName("picture")[0];
+    const changePicture = () => {
+      currentImageIndex++;
+      if (currentImageIndex >= imagesPaths.length) {
+        currentImageIndex = 0;
+      }
+      mainPicture.src = imagesPaths[currentImageIndex];
+      aboutPictureElement.innerText = imageText[currentImageIndex]
+    }
+  </script>
 </html>
