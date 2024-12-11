@@ -7,6 +7,14 @@
   max-width: 100%;
 }
 
+.center-column > header {
+  max-width: 400px;
+}
+
+.center-column > header > * {
+  margin: 0;
+}
+
 html {
   background-color: #699;
 }
@@ -21,5 +29,9 @@ html {
   .picture {
     width: 250px;
     height: 250px;
+  }
+
+  .center-column > header {
+    max-width: 250px;
   }
 }
