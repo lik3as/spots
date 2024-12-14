@@ -1,3 +1,7 @@
+html {
+  background-color: #699;
+}
+
 .center-column {
   display: flex;
   flex-direction: column;
@@ -15,15 +19,19 @@
   margin: 0;
 }
 
-html {
-  background-color: #699;
-}
-
 .picture {
   width: 400px;
   height: 400px;
 }
 
+main button {
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @media screen and (width <= 768px) {
   .picture {
