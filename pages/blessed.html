@@ -22,27 +22,10 @@
         a rua por si só já é bem bonita, mas quando o Sol bate
         fica perfeito
       </p>
-      <button onclick="changePicture()">
+      <button onclick="changePictureOf('blessed')">
         próxima foto
       </button>
     </main>
+    <script defer src="/assets/scripts/%picture-carousel"></script>
   </body>
-  <script defer>
-    const imagesPaths = ["../assets/images/%blessed-sun-day", "../assets/images/%blessed-bench"];
-    const imageText = ["a rua por si só já é bem bonita, mas quando o Sol bate fica perfeito",
-    "deve ser legal dar um BS crooked (acho que é esse o nome) aí."]
-
-    let currentImageIndex = 0;
-
-    const aboutPictureElement = document.getElementById("about-picture");
-    const mainPicture = document.getElementsByClassName("picture")[0];
-    const changePicture = () => {
-      currentImageIndex++;
-      if (currentImageIndex >= imagesPaths.length) {
-        currentImageIndex = 0;
-      }
-      mainPicture.src = imagesPaths[currentImageIndex];
-      aboutPictureElement.innerText = imageText[currentImageIndex]
-    }
-  </script>
 </html>
