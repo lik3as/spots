@@ -15,8 +15,8 @@ export default class AppEngine {
 
         if (handler) {
           handler.length == 2
-            ? (handler as assetRequestHandler)(req, res)
-            : (handler as pageRequestHandler)(res);
+            ? (handler as assetRequestHandler).apply(controller, [req, res])
+            : (handler as pageRequestHandler).apply(controller, [res]);
           break;
         }
       }
